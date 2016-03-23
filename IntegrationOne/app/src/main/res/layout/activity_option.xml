@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="5dp"
+    tools:context="com.example.paresh.integrationone.OptionActivity">
+
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/cardList"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

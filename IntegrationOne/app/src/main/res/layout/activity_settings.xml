@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.braceapps.dusky.activities.Settings">
+
+    <LinearLayout
+        android:id="@+id/MessagesSettingLL"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="#C75050"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="Tap to stop sending/recieving Messages"
+            android:textSize="20dp"
+            android:id="@+id/MessagesSettingTV" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/CallSettingLL"
+        android:layout_below="@+id/MessagesSettingLL"
+        android:layout_width="match_parent"
+        android:background="#8CC29F"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="Tap to stop sending/recieving Call Log"
+            android:textSize="20dp"
+            android:id="@+id/CallSettingTV" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/NotificationLL"
+        android:layout_below="@+id/CallSettingLL"
+        android:layout_width="match_parent"
+        android:background="#8CC29F"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="Tap to stop recieving Notifications"
+            android:textSize="20dp"
+            android:id="@+id/NotificationTV" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

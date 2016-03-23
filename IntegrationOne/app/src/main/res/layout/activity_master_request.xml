@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.paresh.integrationone.ShowDeviceIdActivity">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_shadow"
+        android:weightSum="1"
+        android:id="@+id/relativeLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#90C551"
+            android:layout_weight="0.09"
+            android:id="@+id/linearLayout3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Pairing request from other device"
+                android:id="@+id/textView"
+                android:layout_gravity="center_horizontal" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/MasterRequestDetails"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/detailTV"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linearLayout3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="ID"
+            android:textStyle="bold"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/detailTV"
+            android:layout_alignLeft="@+id/detailTV"
+            android:layout_alignStart="@+id/detailTV" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/imeiTV"
+            android:layout_below="@+id/detailTV"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/textView2"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="Sample"
+            android:textColor="#90C551"
+            android:textStyle="bold"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_toRightOf="@+id/textView2" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancelRequestPreSlaveButton"
+            android:src="@drawable/ic_action_accept"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_below="@+id/imeiTV"
+            android:layout_alignLeft="@+id/imeiTV"
+            android:layout_alignStart="@+id/imeiTV" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/declineMaster"
+            android:src="@drawable/ic_action_cancel"
+            android:layout_alignTop="@+id/cancelRequestPreSlaveButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="80dp"
+            android:layout_marginEnd="80dp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+
+

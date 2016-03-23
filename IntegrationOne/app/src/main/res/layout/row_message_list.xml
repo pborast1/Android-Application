@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ContactName"
+        android:id="@+id/contactTV"
+        android:textColor="@color/dim_foreground_material_light"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/localContactTV"
+        android:layout_alignStart="@+id/localContactTV" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="CallOrMsgTime"
+        android:id="@+id/timeTV"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/button_material_dark"
+        android:layout_marginTop="1dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=""
+        android:id="@+id/calltypeTV"
+        android:textColor="@color/button_material_dark"
+        android:textStyle="italic"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_alignTop="@+id/messageTV" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="+91123456789101"
+        android:id="@+id/messageTV"
+        android:textColor="@color/dim_foreground_material_light"
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/contactTV"
+        android:layout_toRightOf="@+id/colourTV"
+        android:layout_toLeftOf="@+id/calltypeTV"
+        android:layout_toStartOf="@+id/calltypeTV" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="  "
+        android:id="@+id/colourTV"
+
+        android:background="#EBCB4A"
+        android:layout_alignTop="@+id/timeTV"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/messageTV" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/abc_search_url_text_normal"
+        android:text="Some ssample name of user"
+        android:id="@+id/localContactTV"
+        android:layout_above="@+id/calltypeTV"
+        android:layout_alignLeft="@+id/messageTV"
+        android:layout_alignStart="@+id/messageTV" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/messageTV"
+        android:layout_toRightOf="@+id/colourTV"
+        android:layout_toEndOf="@+id/colourTV"
+        android:visibility="gone"
+        android:weightSum="1"
+        android:id="@+id/linearLayoutHideUnHide">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:id="@+id/FrameLeft"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.04">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:paddingLeft="10dp"
+                android:text="CALL BACK"
+                android:textStyle="bold"
+                android:textColor="@color/accent_material_light"
+                android:id="@+id/Callback"
+                android:layout_gravity="left|center_vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:paddingRight="10dp"
+                android:text="MESSAGE"
+                android:textStyle="bold"
+                android:textColor="@color/accent_material_light"
+                android:id="@+id/messageback"
+                android:layout_gravity="right|center_vertical" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="    "
+        android:visibility="gone"
+        android:background="#EBCB4A"
+        android:id="@+id/colourTVHideUnhide"
+        android:layout_alignBottom="@+id/linearLayoutHideUnHide"
+        android:layout_toLeftOf="@+id/linearLayoutHideUnHide"
+        android:layout_toStartOf="@+id/linearLayoutHideUnHide"
+        android:layout_alignTop="@+id/linearLayoutHideUnHide" />
+</RelativeLayout>

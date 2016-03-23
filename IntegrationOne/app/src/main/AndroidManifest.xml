@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.braceapps.dusky" >
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.SEND" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.braceapps.dusky.MainActivity"
+            android:label="@string/app_name"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.braceapps.dusky.activities.OptionActivity"
+            android:label="@string/title_activity_option"
+            android:launchMode="singleTask"
+
+            />
+        <activity
+            android:name="com.braceapps.dusky.activities.PrePairingActivity"
+            android:label="@string/title_activity_pre_pairing"
+            android:noHistory="true">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.braceapps.dusky.activities.OptionActivity" />
+        </activity>
+        <activity
+            android:name="com.braceapps.dusky.activities.ShowDeviceIdActivity"
+            android:label="@string/title_activity_show_device_id"
+            android:noHistory="true"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.braceapps.dusky.activities.OptionActivity" />
+        </activity>
+        <activity
+            android:name="com.braceapps.dusky.activities.MainTabActivity"
+            android:label="@string/title_activity_main_tab"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.braceapps.dusky.activities.SlaveActivity"
+            android:label="@string/title_activity_slave"
+            android:launchMode="singleTask" />
+
+        <receiver android:name="com.braceapps.dusky.activities.IncomingSms" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.braceapps.dusky.activities.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.braceapps.dusky.telephonycall.OutGoingCallLog" >
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.braceapps.dusky.telephonycall.IncomingCallLog" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.braceapps.dusky.requestlogger.NetworkStateReciever" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.braceapps.dusky.activities.GCMNotificationIntentHandlerMaster" />
+        <service android:name="com.braceapps.dusky.telephonymessage.services.MessagLogService" />
+
+        <activity
+            android:name="com.braceapps.dusky.activities.PreSlaveActivity"
+            android:label="@string/title_activity_pre_slave"
+            android:noHistory="true">
+        </activity>
+        <activity
+            android:name="com.braceapps.dusky.activities.MasterRequestActivity"
+            android:label="@string/title_activity_master_request"
+            android:noHistory="true">
+        </activity>
+        <activity
+            android:name="com.braceapps.dusky.activities.Settings"
+            android:label="@string/title_activity_settings"
+            android:noHistory="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.braceapps.dusky.activities.SlaveActivity" />
+        </activity>
+
+        <activity
+            android:name="com.braceapps.dusky.activities.InfoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_info"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
+    </application>
+
+</manifest>
